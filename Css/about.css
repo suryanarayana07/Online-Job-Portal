@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+    /* margin: 0 !important;
+    padding: 0 !important; */
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+input:focus,
+input:active,
+input:hover{
+    border: 1px solid grey;
+    outline: none;
+    box-shadow: none !important;
+}
+
+/* ===========Navbar============== */
+
+.navbar{
+    background: #ffffff;
+    box-shadow: 0 0 8px #b1aaaa;
+}
+#logo, .logo{
+    font-weight: 600;margin-left: 8px; 
+    font-size: 20px; 
+    color: #5732ff;
+    transition: all 0.4s;
+}
+#logo:hover{
+color: #550d08 !important;
+}
+.navbar a{
+    color: #000000 !important;
+    transition: all 0.4s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: #e25300 !important;
+}
+.dropdown-menu{
+    border: none;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus{
+    border: none;
+    box-shadow: none;
+}
+
+.login-btn{
+    padding: 4px 20px;
+    background: #db5101;
+    color: #ffffff;
+}
+.Register-btn{
+    border: none;
+}
+.Register-btn:hover{
+    color: #7e3207;
+}
+.Register-btn:focus,
+.Register-btn:active{
+    border: none;
+}
+
+/* ===========scrollUp============ */
+.scrollUp{
+    position: fixed;
+    top: 90vh;
+    right: 10px;
+    background: #032992f3;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 2px 4px;
+    cursor: pointer;
+    border-radius: 10px;
+    animation: Radius .5s ease-in-out forwards;
+    opacity: 0.1;
+    transform: translateY(200px);
+    display: none;
+    z-index: 99999;
+}
+
+@keyframes Radius {
+  to{
+    opacity: 1;
+    scale: 1.1;
+    transform: translateY(0px);
+  }
+}
+
+/* =================modal======================= */
+
+.login-link{
+    cursor: pointer !important;
+}
+input:hover,
+input:focus,
+input:active{
+border:  2px solid #76baf1 !important;
+}
+.btn-close{
+    width: 20px;
+    height: 20px;
+    color: #fff !important;
+    border: 2px solid rgb(0, 0, 0) !important;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.btn-close:focus,
+.btn-close:active{
+    box-shadow: none;
+}
+
+/* ====================About UltraJob===================== */
+.about-ultrajob{
+    height: 250px;
+    background-image: linear-gradient(rgba(79, 33, 131, 0.747), rgba(26, 8, 129, 0.726)), url(../img/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-header-text{
+    font-size: 10px;
+}
+
+/* ==================introduction================== */
+.intro-right{
+    background-image:url(../img/cheers.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+}
+
+.exp{
+    background-color: #404dc5;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+}
+.exp p{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.top-sky{
+    width: 100%;
+    position: absolute;
+    bottom: 45px;
+    right: 0px;
+    height: 25px;
+    background: skyblue;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.left a{
+    font-size: 12px;
+}
+
+/* ==============================Services===================== */
+.service-card{
+    background: #ffffff;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #cccaca;
+    transition: all 0.5s;
+}
+ .service-card-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    padding: 15px;
+    box-shadow: 0 0 5px 5px #e4e0e0;
+ }
+ .service-card-icon i{
+    font-size: 25px;
+    font-weight: 600;
+    color: #2f93c2;
+ }
+ .service-card-text{
+    font-size: 14px;
+ }
+ .service-card.active,
+ .service-card:hover{
+    background: #5a91be27;
+    /* border-top: 8px solid #1596e0; */
+ }
+
+ /* =======================Testimonial=================== */
+ .Testimonial{
+    height: 300px;
+    background: #c3c9db;
+ }
+
+ /* ===============job openings============== */
+.Jobs {
+    height: 300px;
+    background-image: linear-gradient(rgb(255 84 16 / 80%), rgb(225 95 19 / 76%)), url(../img/img.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-job-open{
+    font-size: 14px;
+}
+.btn-job-open:hover,
+.btn-job-open:focus{
+    background: none !important;
+}
+
+/* ===================foooter=================== */
+
+.footer p {
+    font-size: 15px;
+
+}
+.footer p a:hover{
+    color: #868282 !important;
+    text-decoration: underline !important;
+}
+.footer h6 {
+    font-weight: 700;
+}
+.notified{
+    position: relative;
+}
+
+.send-inp {
+    padding-left: 12px;
+    text-align: center;
+}
+
+.send-inp::placeholder {
+    text-align: center;
+    font-size: 12px;
+}
+
+.send-inp:focus,
+.send-inp:active {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.send-btn {
+    position: absolute;
+    top: 81px;
+    right: 33px;
+    background: #6b0ba7;
+    color: white;
+    font-size: 10px;
+}
+
+.send-btn:hover {
+    background: #b66fe2;
+    color: #fff;
+}
+
+.bi-person {
+    position: absolute;
+   top: 82px;
+   left: 40px;
+}
+
+#send {
+    height: 100px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #d3d0f5c7 !important;
+}
+
+.footer-main {
+    background: #340572;
+    color: #ffffff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #c5bcbc;
+    margin-right: 8px;
+    font-size: 17px;
+}
+
+.social-icons a i {
+    transition: all 0.4s;
+}
+
+.bi-twitter:hover {
+    color: #1596e0;
+}
+
+.bi-facebook:hover {
+    color: #09249e;
+}
+
+.bi-linkedin:hover {
+    color: #2d3370;
+}
+
+.bi-instagram:hover {
+    color: #a70649;
+}
+
+.bi-youtube:hover {
+    color: #a00000;
+}
+/* ===================footer end==================== */

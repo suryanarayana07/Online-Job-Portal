@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+    /* margin: 0 !important;
+    padding: 0 !important; */
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+input:focus,
+input:active,
+input:hover{
+    border: 1px solid grey;
+    outline: none;
+    box-shadow: none !important;
+}
+
+/* ===========Navbar============== */
+
+.navbar{
+    background: #ffffff;
+    box-shadow: 0 0 8px #b1aaaa;
+}
+#logo, .logo{
+    font-weight: 600;margin-left: 8px; 
+    font-size: 20px; 
+    color: #5732ff;
+    transition: all 0.4s;
+}
+#logo:hover{
+color: #550d08 !important;
+}
+.navbar a{
+    color: #000000 !important;
+    transition: all 0.4s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: #e25300 !important;
+}
+.dropdown-menu{
+    border: none;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus{
+    border: none;
+    box-shadow: none;
+}
+
+.login-btn{
+    padding: 4px 20px;
+    background: #db5101;
+    color: #ffffff;
+}
+.Register-btn{
+    border: none;
+}
+.Register-btn:hover{
+    color: #7e3207;
+}
+.Register-btn:focus,
+.Register-btn:active{
+    border: none;
+}
+
+/* ===========scrollUp============ */
+.scrollUp{
+    position: fixed;
+    top: 90vh;
+    right: 10px;
+    background: #032992f3;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 2px 4px;
+    cursor: pointer;
+    border-radius: 10px;
+    animation: Radius .5s ease-in-out forwards;
+    opacity: 0.1;
+    transform: translateY(200px);
+    display: none;
+    z-index: 99999;
+}
+
+@keyframes Radius {
+  to{
+    opacity: 1;
+    scale: 1.1;
+    transform: translateY(0px);
+  }
+}
+
+/* =================modal======================= */
+
+.login-link{
+    cursor: pointer !important;
+}
+input:hover,
+input:focus,
+input:active{
+border:  2px solid #76baf1 !important;
+}
+.btn-close{
+    width: 20px;
+    height: 20px;
+    color: #fff !important;
+    border: 2px solid rgb(0, 0, 0) !important;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.btn-close:focus,
+.btn-close:active{
+    box-shadow: none;
+}
+/* ============header================== */
+.header {
+    height: 520px;
+    background-image: linear-gradient(rgba(79, 33, 131, 0.747), rgba(26, 8, 129, 0.726)), url(../img/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.Search {
+    padding: 15px;
+    border-radius: 8px;
+    background: #5d1dc4da;
+    position: relative;
+}
+.Search input{
+    padding-left: 30px !important;
+    font-size: 14px;
+}
+.inp-user-ico{
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    color: #000000;
+    z-index: 9;
+}
+.inp-loc-ico{
+    position: absolute;
+    top: 7px;
+    left: 258px;
+    z-index: 9;
+    color: #000000;
+}
+.Browse-btn{
+    border: 2px solid blue;
+}
+.Search p {
+    font-size: 10px;
+}
+
+.Search p .btn {
+    font-size: 11px;
+    margin: 2px;
+}
+
+.Search p .btn:hover {
+    background: none;
+}
+
+#findJob {
+    background-color: rgb(75, 22, 124);
+    color: #fff;
+    border: none;
+}
+
+@media screen and (max-width: 768px){
+    .inp-loc-ico{
+        position: absolute;
+        top: 7px;
+        left: 138px;
+        z-index: 999;
+        color: #000000;
+    }
+}
+@media screen and (max-width: 1200px){
+    .inp-loc-ico{
+        position: absolute;
+        top: 7px;
+        left: 180px;
+        z-index: 999;
+        color: #000000;
+    }
+}
+@media screen and (max-width: 478px){
+    .inp-loc-ico{
+        position: absolute;
+        top: 7px;
+        left: 148px;
+        z-index: 999;
+        color: #000000;
+    }
+}
+@media screen and (max-width: 390px){
+    .inp-loc-ico{
+        position: absolute;
+        top: 7px;
+        left: 138px;
+        z-index: 999;
+        color: #000000;
+    }
+}
+
+/* ==================.Categories=================== */
+.Categories {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #560a8a;
+    color: #fff;
+    border: 6px solid #822cc9;
+    position: relative;
+}
+
+.number {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #1793e6;
+    border-radius: 50%;
+    top: -5px;
+    right: -10px;
+    font-size: 14px;
+}
+.Categories p {
+    font-size: 8px;
+}
+/* =======================intro page======================= */
+.intro {
+    height: 300px;
+}
+
+.left {
+    background-image: url(../img/Female.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.middle {
+    background: #1077d8;
+}
+
+.right {
+    background-image: url(../img/right.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.investor {
+    border-top: 20px solid #497bd6;
+    background-color: #822cc9;
+    padding: 8px;
+    position: relative;
+    bottom: -200px;
+    right: -50px;
+  border-radius: 15px;
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.subName {
+    font-size: 14px;
+}
+
+.sky {
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    background: #1596e0;
+    width: 100%;
+    height: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: 9;
+}
+.main-intro {
+    font-size: 1rem;
+}
+
+.main-intro .btn {
+    font-size: 14px;
+}
+
+.main-intro .btn:hover {
+    background: none;
+}
+
+.intro-btn {
+    position: relative;
+    background: #ff9113;
+    font-size: 14px;
+}
+
+.intro-btn:hover {
+    background: #ff9113;
+}
+/* =======================jobs================= */
+.job{
+    height: 90px;
+    border-radius: 10px;
+}
+.comapny-logo {
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.job-text {
+    font-size: 13px !important;
+}
+
+.comapny-logo img {
+    box-shadow: 0 0 15px rgb(141, 132, 132);
+}
+
+.bg-sky{
+    background: #084094;
+    color: #fff;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.bg-light{
+    background: #9da9bb;
+    color: #000000;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+.job-btn{
+    font-size: 15px;
+    height: 40px;
+    padding: 8px 20px;
+    background: #c54d07;
+    transition: all 0.3s;
+}
+
+.job-btn:hover {
+    background: #a03c06;
+}
+.odd{
+    box-shadow: 0 0 8px #bbb6b6;
+}
+
+/* =================paginationa========================== */
+.page-link{
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    border: 1 solid grey;
+    color: #000000;
+}
+.outline-0 {
+    border: none;
+}
+
+.page-link:hover,
+.page-link:focus,
+.page-link:active,
+.page-link.active {
+    background: #6184f8;
+    color: #ffffff !important;
+    border: none;
+    box-shadow: none;
+}
+
+.outline-0:hover,
+.outline-0:focus,
+.outline-0:active {
+    background: none;
+    color: #4141e9 !important;
+}
+
+/* =================another section================ */
+.info {
+    height: 450px;
+    background: #483ed4;
+}
+
+.info a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #5377ec;
+}
+
+.info-right {
+    height: 450px;
+    background-image: url(../img/img.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===============job cards============= */
+.card{
+    position: relative;
+}
+.card-info{
+    position: absolute;
+    top: 110px;
+    left: 20px;
+}
+.card-info-1{
+    left: 100px;
+}
+.card-logo{
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 6px #585353 !important;
+    margin-left: 5px;
+}
+.comapny-name{
+    font-size: 15px;
+}
+.card{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.card-text{
+    font-size: 15px;
+}
+.card-icon{
+    padding: 4px !important;
+    font-size: 14px;
+    margin: 2px;
+    border: none;
+    outline: none;
+    background: none;
+}
+.card-job-text{
+    margin: 3px;
+    font-size: 13px;
+}
+
+.card-btn{
+    background-color: #c54d07;
+    font-size: 12px;
+    transition: all 0.5s;
+}
+.card-btn:hover{
+    background-color: #a53c00;
+}
+
+/* ==============Testimonial============= */
+.testimonial{
+    height: 400px;
+    background-color: #b2b5d4;
+}
+
+/* ===============job openings============== */
+.Jobs {
+    height: 300px;
+    background-image: linear-gradient(rgb(255 84 16 / 80%), rgb(225 95 19 / 76%)), url(../img/img.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-job-open{
+    font-size: 14px;
+}
+.btn-job-open:hover,
+.btn-job-open:focus{
+    background: none !important;
+}
+
+/* ===================foooter=================== */
+
+.footer p {
+    font-size: 15px;
+
+}
+.footer p a:hover{
+    color: #868282 !important;
+    text-decoration: underline !important;
+}
+.footer h6 {
+    font-weight: 700;
+}
+.notified{
+    position: relative;
+}
+
+.send-inp {
+    padding-left: 1px;
+    text-align: center;
+}
+
+.send-inp::placeholder {
+    text-align: center;
+    font-size: 14px;
+}
+
+.send-inp:focus,
+.send-inp:active {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.send-btn {
+    position: absolute;
+    top: 81px;
+    right: 33px;
+    background: #6b0ba7;
+    color: white;
+    font-size: 10px;
+}
+
+.send-btn:hover {
+    background: #b66fe2;
+    color: #fff;
+}
+
+#bi-person {
+    position: absolute;
+   top: 82px;
+   left: 40px;
+}
+
+#send {
+    height: 120px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #d3d0f5c7 !important;
+}
+
+.footer-main {
+    background: #340572;
+    color: #ffffff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #c5bcbc;
+    margin-right: 8px;
+    font-size: 17px;
+}
+
+.social-icons a i {
+    transition: all 0.4s;
+}
+
+.bi-twitter:hover {
+    color: #1596e0;
+}
+
+.bi-facebook:hover {
+    color: #09249e;
+}
+
+.bi-linkedin:hover {
+    color: #2d3370;
+}
+
+.bi-instagram:hover {
+    color: #a70649;
+}
+
+.bi-youtube:hover {
+    color: #a00000;
+}
+/* ===================footer end==================== */

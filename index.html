@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UltraJob.com</title>
+    <!-- ========================bootstrap css============== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- =================bootstrap icon================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- ==================custom css================ -->
+    <link rel="stylesheet" href="/Css/index.css">
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <!-- ================Navbar============= -->
+                <nav class="navbar navbar-expand-lg fixed-top">
+                    <div class="container">
+                        <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="logo" width="30px"><span id="logo">UltraJob</span></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-item" aria-current="page" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-item" aria-current="page" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Pages
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item nav-link-item text-center nav-link" href="./joblisting.html">Job Listings</a></li>
+                                        <li><a class="dropdown-item nav-link-item text-center nav-link" href="./jobDetails.html">Job Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item nav-link-item">
+                                    <a class="nav-link" aria-current="page" href="./contact.html">Contact</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <button type="button" class="btn nav-btn rounded-pill py-1 Register-btn" data-bs-toggle="modal"
+                                    data-bs-target="#registerModal">Register</button>
+                                <button type="button" class="btn nav-btn btn-danger rounded-pill login-btn"
+                                    data-bs-toggle="modal" data-bs-target="#login">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+          <!-- =====================scrollUp button=================== -->
+          <div class="container justify-content-center align-items-center">
+            <button><i class="bi bi-chevron-up scrollUp"></i></button>
+        </div>
+        <!-- ================register-modal=============== -->
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered z-3">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h4 class="logo text-center my-4 fs-2">UltraJob</h4>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Name">
+                            <label for="floatingInput">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword"
+                                placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                I read and agree With all the <a href="#" class="text-decoration-none">Term &
+                                    Condition</a>
+                            </label>
+                        </div>
+                        <p class="mt-1 ">Already have a Account? <a data-bs-toggle="modal"
+                                data-bs-target="#login" class="login-link">LogIn</a></p>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary py-1 px-5"
+                        data-bs-dismiss="modal">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ======================Login-modal========================= -->
+<div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="loginLabel" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered z-3">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="container">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h4 class="logo text-center my-4 fs-2">UltraJob</h4>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput"
+                        placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword"
+                        placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <a href="#" class="text-decoration-none">Forgotton Password</a><br>
+                <p class="mt-2">Don't have account? &nbsp;<a data-bs-toggle="modal"
+                        data-bs-target="#registerModal" class="login-link">Register</a></p>
+            </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-primary py-1 px-4" data-bs-dismiss="modal">Login</button>
+        </div>
+    </div>
+</div>
+</div>
+ <!-- ================header start=========== -->
+ <div class="row justify-content-center align-items-center header mt-4">
+    <div class="col-md-4 mt-5 col-8">
+        <p>Are you looking for your dream job?</p>
+        <h3>Online Platform <br>best Job portal</h3>
+        <button type="button" class="btn btn-outline-primary rounded-pill Browse-btn"> Browse Categories</button>
+    </div>
+    <div class="col-md-4 mt-2 col-8 Search pb-1">
+        <h4>Search your dream job</h4>
+        <div class="input-group mb-3 gap-3">
+            <input type="text" class="form-control rounded-pill inp" placeholder="  Job Title" 
+                aria-label="Username"> <span class="inp-user-ico"><i class="bi bi-person"></i></span>
+            <input type="text" class="form-control rounded-pill inp" placeholder="  Location"
+                aria-label="Server">
+                <span class="inp-loc-ico"><i class="bi bi-geo-alt"></i></span>
+        </div>
+        <button type="button" class="col-12 btn btn-outline-primary rounded-pill" id="findJob">Find a
+            JOb</button>
+        <p class="mt-2">Popular Keywords: <button type="button"
+                class="btn btn-outline-light text-white rounded-pill">Web
+                Design</button><button type="button"
+                class="btn btn-outline-light text-white rounded-pill">Marketing</button><button
+                type="button" class="btn btn-outline-light text-white  rounded-pill">Costumer
+                Support</button></p>
+    </div>
+</div>
+<!-- ===================Header End ====================== -->
+<!-- ===============broswe Categories=================== -->
+<h4 class="my-4 text-center">Browse By Categories</h4>
+<div class="row align-items-center justify-content-center m-4 gap-4 mb-4">
+    <div class="col-md-4 col-sm-6 rounded-circle Categories">
+        <div class="number">320</div>
+        <span><i class="bi bi-calendar3-event"></i></span>
+        <p>Web design</p>
+    </div>
+    <div class="col-md-4 col-sm-6 rounded-circle Categories">
+        <div class="number">100</div>
+        <span><i class="bi bi-twitch"></i></span>
+        <p>Marketing</p>
+    </div>
+    <div class="col-md-4 col-sm-6 rounded-circle Categories">
+        <div class="number">98</div>
+        <span><i class="bi bi-play-circle-fill"></i></span>
+        <p>Video</p>
+    </div>
+    <div class="col-md-4 col-sm-6 rounded-circle Categories">
+        <div class="number">105</div>
+        <span><i class="bi bi-globe2"></i></span>
+        <p>Websites</p>
+    </div>
+    <div class="col-md-4 col-sm-6 rounded-circle Categories">
+        <div class="number">87</div>
+        <span><i class="bi bi-people-fill"></i></span>
+        <p>costumer Support</p>
+    </div>
+</div>
+  <!-- =================================Recent Jobs=========================== -->
+
+  <div class="row align-items-center justify-content-center m-3 gap-3 gap-md-1 mb-4">
+    <div class="col-md-3 intro left rounded-start-4">
+        <div class="col-md-8 investor text-white">
+            <span class="name">Julia Ward</span><br>
+            <span class="subName">Investor</span>
+        </div>
+    </div>
+    <div class=" col-md-5 intro middle py-5 px-4 text-white main-intro">
+        <h3>Introduction Ultrajob</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, distinctio hic quas magni
+            quam
+            animi amet nesciunt reprehenderit quasi.</p>
+        <button type="button" class="btn btn-outline-light text-white rounded-pill">Get to know us</button>
+        <button type="button" class="btn text-white">Explore Jobs</button>
+    </div>
+    <div class="col-md-3 intro right rounded-end-4">
+        <button type="button" class="btn text-white rounded-pill intro-btn"><i
+                class="bi bi-instagram"></i>@Ultrajob</button>
+    </div>
+</div>
+<!-- ===========================feature job======================== -->
+<div class="row justify-content-center my-4">
+    <div class="col-md-4">
+        <h1 class="text-center">Features jobs</h1>
+        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat optio et
+            vero.
+        </p>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="row my-4">
+            <div class="col-2 align-items-center comapny-logo"><img src="./img/netflix.png" alt="amazon"
+                class="img-fluid rounded-circle p-1"></div>
+        <div class="col-6">
+            <div class="row align-items-center justify-content-center mt-2">
+                <div class="col-12">
+                    <h5>Technical Lead</h5>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="job-text "><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="job-text"><i class="bi bi-cash"></i> $20K</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="job-text"><span class="bg-sky my-1">Internship</span><span
+                            class="my-1 bg-light mx-1">Freelance</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-md-end justify-content-lg-end justify-content-center align-items-center">
+            <button type="button" class="btn text-white rounded-pill job-btn my-2">Apply now</button>
+        </div>
+        </div>  
+        <div class="row my-4 odd">
+            <div class="col-2 align-items-center comapny-logo"><img src="./img/google.png" alt="amazon"
+                class="img-fluid rounded-circle p-1"></div>
+        <div class="col-6">
+            <div class="row align-items-center justify-content-center mt-2">
+                <div class="col-12">
+                    <h5>Business Director</h5>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="job-text "><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="job-text"><i class="bi bi-cash"></i> $20K</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="job-text"><span class="bg-sky my-1">Internship</span><span
+                            class="my-1 bg-light mx-1">Freelance</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-md-end justify-content-lg-end justify-content-center align-items-center">
+            <button type="button" class="btn text-white rounded-pill job-btn my-2">Apply now</button>
+        </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-2 align-items-center comapny-logo"><img src="./img/amazon.png" alt="amazon"
+                class="img-fluid rounded-circle p-1"></div>
+        <div class="col-6">
+            <div class="row align-items-center justify-content-center mt-2">
+                <div class="col-12">
+                    <h5>HR Manager</h5>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="job-text "><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="job-text"><i class="bi bi-cash"></i> $20K</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="job-text"><span class="bg-sky my-1">Internship</span><span
+                            class="my-1 bg-light mx-1">Freelance</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-md-end justify-content-lg-end justify-content-center align-items-center">
+            <button type="button" class="btn text-white rounded-pill job-btn my-2">Apply now</button>
+        </div>
+        </div>
+        <div class="row my-4 odd">
+            <div class="col-2 align-items-center comapny-logo"><img src="./img/apple.png" alt="amazon"
+                class="img-fluid rounded-circle p-1"></div>
+        <div class="col-6">
+            <div class="row align-items-center justify-content-center mt-2">
+                <div class="col-12">
+                    <h5>Dev Ops</h5>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="job-text "><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="job-text"><i class="bi bi-cash"></i> $20K</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="job-text"><span class="bg-sky my-1">Internship</span><span
+                            class="my-1 bg-light mx-1">Freelance</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-md-end justify-content-lg-end justify-content-center align-items-center">
+            <button type="button" class="btn text-white rounded-pill job-btn my-2">Apply now</button>
+        </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-2 align-items-center comapny-logo"><img src="./img/netflix.png" alt="amazon"
+                class="img-fluid rounded-circle p-1"></div>
+        <div class="col-6">
+            <div class="row align-items-center justify-content-center mt-2">
+                <div class="col-12">
+                    <h5>UX Desiger</h5>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="job-text "><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <p class="job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="job-text"><i class="bi bi-cash"></i> $20K</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <p class="job-text"><span class="bg-sky my-1">Internship</span><span
+                            class="my-1 bg-light mx-1">Freelance</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-md-end justify-content-lg-end justify-content-center align-items-center">
+            <button type="button" class="btn text-white rounded-pill job-btn my-2">Apply now</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- =================pagination================= -->
+<div class="row my-5">
+    <div class="col">
+        <nav aria-label="Page navigation me-auto">
+            <ul class="pagination justify-content-center my-2">
+                <li class="page-item mx-3">
+                    <a class="page-link outline-0" href="#" aria-label="Previous">
+                        <span aria-hidden="true">Prev</span>
+                    </a>
+                </li>
+                <li class="page-item mx-1  active"><a class="page-link rounded-circle" href="#">1</a></li>
+                <li class="page-item mx-1"><a class="page-link rounded-circle" href="#">2</a></li>
+                <li class="page-item mx-1"><a class="page-link rounded-circle" href="#">3</a></li>
+                <li class="page-item mx-1"><a class="page-link rounded-circle" href="#">4</a></li>
+                <li class="page-item mx-1"><a class="page-link rounded-circle" href="#">5</a></li>
+                <li class="page-item mx-1">
+                    <a class="page-link outline-0" href="#" aria-label="Next">
+                        <span aria-hidden="true">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- =======================another section=========================== -->
+
+<div class="row align-items-center justify-content-center m-4 gap-3 mb-4">
+    <div class="col-md-5 col-lg-4 info info-left p-4 text-white rounded-start-4">
+        <h2>Ultrajob helps you to get an easier way to get new job</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, blanditiis quo voluptatem
+            necessitatibus nam culpas molestiae aliquam voluptatum?</p>
+        <div class="row">
+            <div class="col-6">
+                <h1>12M</h1>
+                <p><a href="">Daily Active Users</a></p>
+            </div>
+            <div class="col-6">
+                <h1>450K</h1>
+                <p><a href="">Openings Jobs</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 col-lg-4 info-right rounded-end-4">
+        <button type="button" class="btn text-white rounded-pill intro-btn fs-2"><i
+                class="bi bi-youtube"></i></button>
+    </div>
+</div>
+<!-- ===========Recent Jobs============= -->
+<div class="row justify-content-center">
+    <div class="col-8">
+        <h2 class="fw-bold">Recent Jobs</h2>
+        <p><strong> Lorem ipsum dolor sit amet</strong> gheth adipisicing elit. <br>
+            Eligendi et quidem natus iste minima veniameaque.</p>
+    </div>
+</div>
+<!-- =============job cards============== -->
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 justify-content-center mb-2">
+                <div class="card justify-content-center">
+                    <p class="job-text my-0"><span class="bg-sky my-1 card-info">Internship</span><span
+                            class="my-1 bg-light mx-1 card-info card-info-1">Freelance</span></p>
+                    <img src="./img/technical.jpg" class="img-fluid card-img-top card-img" alt="">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Technical Lead</h5>
+                        <div class="row align-items-center">
+                            <div class="col-auto p-0"><img src="./img/amazon.png" alt="amazon"
+                                    class="img-fluid rounded-circle card-logo"></div>
+                            <div class="col-5 card-text mx-1 comapny-name">Amazon</div>
+                            <div class="col text-end"><button class="card-icon p-0"><i
+                                        class="bi bi-bookmark"></i></button> <button class="card-icon p-0"><i
+                                        class="bi bi-heart"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-auto">
+                            <p class="card-job-text"><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                        </div>
+                        <div class="col-sm-6 col-12 px-3">
+                            <p class="card-job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row px-3 align-items-center pb-2">
+                        <div class="col-4">
+                            <p class="job-text my-1"><i class="bi bi-cash"></i> $20K</p>
+                        </div>
+                        <div class="col-8 text-end">
+                            <button type="button" class="btn text-white rounded-pill card-btn">Apply
+                                now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 justify-content-center mb-2">
+                <div class="card justify-content-center">
+                    <p class="job-text my-0"><span class="bg-sky my-1 card-info">Internship</span><span
+                            class="my-1 bg-light mx-1 card-info card-info-1">Freelance</span></p>
+                    <img src="./img/marketig.jpg" class="img-fluid card-img-top card-img" alt="">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Marketing Assistant</h5>
+                        <div class="row align-items-center">
+                            <div class="col-auto p-0"><img src="./img/apple.png" alt="amazon"
+                                    class="img-fluid rounded-circle card-logo"></div>
+                            <div class="col-5 card-text mx-1 comapny-name">Apple</div>
+                            <div class="col text-end"><button class="card-icon p-0"><i
+                                        class="bi bi-bookmark"></i></button> <button class="card-icon p-0"><i
+                                        class="bi bi-heart"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-auto">
+                            <p class="card-job-text"><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                        </div>
+                        <div class="col-sm-6 px-3">
+                            <p class="card-job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row px-3 align-items-center pb-2">
+                        <div class="col-4">
+                            <p class="job-text my-1"><i class="bi bi-cash"></i> $20K</p>
+                        </div>
+                        <div class="col-8 text-end">
+                            <button type="button" class="btn text-white rounded-pill card-btn">Apply
+                                now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 justify-content-center mb-2">
+                <div class="card justify-content-center">
+                    <p class="job-text my-0"><span class="bg-sky my-1 card-info">Internship</span><span
+                            class="my-1 bg-light mx-1 card-info card-info-1">Freelance</span></p>
+                    <img src="./img/programmer.jpg" class="img-fluid card-img-top card-img" alt="">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Programmer</h5>
+                        <div class="row align-items-center">
+                            <div class="col-auto p-0"><img src="./img/meta.png" alt="amazon"
+                                    class="img-fluid rounded-circle card-logo"></div>
+                            <div class="col-5 card-text mx-1 comapny-name">Meta</div>
+                            <div class="col text-end"><button class="card-icon p-0"><i
+                                        class="bi bi-bookmark"></i></button> <button class="card-icon p-0"><i
+                                        class="bi bi-heart"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-auto">
+                            <p class="card-job-text"><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                        </div>
+                        <div class="col-sm-6 px-3">
+                            <p class="card-job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row px-3 align-items-center pb-2">
+                        <div class="col-4">
+                            <p class="job-text my-1"><i class="bi bi-cash"></i> $20K</p>
+                        </div>
+                        <div class="col-8 text-end">
+                            <button type="button" class="btn text-white rounded-pill card-btn">Apply
+                                now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 justify-content-center mb-2">
+                <div class="card justify-content-center">
+                    <p class="job-text my-0"><span class="bg-sky my-1 card-info">Internship</span><span
+                            class="my-1 bg-light mx-1 card-info card-info-1">Freelance</span></p>
+                    <img src="./img/hr.jpg" class="img-fluid card-img-top card-img" alt="">
+                    <div class="card-body">
+                        <h5 class="fw-bold">HR Manager</h5>
+                        <div class="row align-items-center">
+                            <div class="col-auto p-0"><img src="./img/netflix.png" alt="amazon"
+                                    class="img-fluid rounded-circle card-logo"></div>
+                            <div class="col-5 card-text mx-1 comapny-name">Netflix</div>
+                            <div class="col text-end"><button class="card-icon p-0"><i
+                                        class="bi bi-bookmark"></i></button> <button class="card-icon p-0"><i
+                                        class="bi bi-heart"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-auto">
+                            <p class="card-job-text"><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                        </div>
+                        <div class="col-sm-6 px-3">
+                            <p class="card-job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row px-3 align-items-center pb-2">
+                        <div class="col-4">
+                            <p class="job-text my-1"><i class="bi bi-cash"></i> $20K</p>
+                        </div>
+                        <div class="col-8 text-end">
+                            <button type="button" class="btn text-white rounded-pill card-btn">Apply
+                                now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 justify-content-center mb-2">
+                <div class="card justify-content-center">
+                    <p class="job-text my-0"><span class="bg-sky my-1 card-info">Internship</span><span
+                            class="my-1 bg-light mx-1 card-info card-info-1">Freelance</span></p>
+                    <img src="./img/sale.jpg" class="img-fluid card-img-top card-img" alt="">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Sales Representive</h5>
+                        <div class="row align-items-center">
+                            <div class="col-auto p-0"><img src="./img/amazon.png" alt="amazon"
+                                    class="img-fluid rounded-circle card-logo"></div>
+                            <div class="col-5 card-text mx-1 comapny-name">Amazon</div>
+                            <div class="col text-end"><button class="card-icon p-0"><i
+                                        class="bi bi-bookmark"></i></button> <button class="card-icon p-0"><i
+                                        class="bi bi-heart"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-auto">
+                            <p class="card-job-text"><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                        </div>
+                        <div class="col-sm-6 px-3">
+                            <p class="card-job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row px-3 align-items-center pb-2">
+                        <div class="col-4">
+                            <p class="job-text my-1"><i class="bi bi-cash"></i> $20K</p>
+                        </div>
+                        <div class="col-8 text-end">
+                            <button type="button" class="btn text-white rounded-pill card-btn">Apply
+                                now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 justify-content-center mb-2">
+                <div class="card justify-content-center">
+                    <p class="job-text my-0"><span class="bg-sky my-1 card-info">Internship</span><span
+                            class="my-1 bg-light mx-1 card-info card-info-1">Freelance</span></p>
+                    <img src="./img/graphic.jpg" class="img-fluid card-img-top card-img" alt="">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Graphic Designer</h5>
+                        <div class="row align-items-center">
+                            <div class="col-auto p-0"><img src="./img/google.png" alt="amazon"
+                                    class="img-fluid rounded-circle card-logo"></div>
+                            <div class="col-5 card-text mx-1 comapny-name">Goggle</div>
+                            <div class="col text-end"><button class="card-icon p-0"><i
+                                        class="bi bi-bookmark"></i></button> <button class="card-icon p-0"><i
+                                        class="bi bi-heart"></i></button></div>
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <div class="col-auto">
+                            <p class="card-job-text"><i class="bi bi-geo-alt"></i> Kaula, Malasiya</p>
+                        </div>
+                        <div class="col-sm-6 px-3">
+                            <p class="card-job-text"><i class="bi bi-clock"></i> 10 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="row px-3 align-items-center pb-2">
+                        <div class="col-4">
+                            <p class="job-text my-1"><i class="bi bi-cash"></i> $20K</p>
+                        </div>
+                        <div class="col-8 text-end">
+                            <button type="button" class="btn text-white rounded-pill card-btn">Apply
+                                now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+</div>
+<div class="row">
+    <div class="col-10">
+        <div class="row justify-content-end mb-4">
+            <div class="col-sm-4 col-12 text-end">
+                <button type="button" class="btn text-white rounded-pill card-btn my-4 fs-6">Browse Job
+                    Listing</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =========testimonial============= -->
+<div class="row testimonial">
+                
+</div>
+
+<!-- ================job openings================= -->
+<div class="row d-flex align-items-center justify-content-evenly Jobs my-4">
+    <div class="col-md-4 text-white">
+        <h2 class="fw-bold">Over 10k Opening jobs</h2>
+        <p class="fs-6 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugiat culpa, quaerat ipsa quae
+            harum quos veritatis voluptatibus asper</p>
+    </div>
+    <div class="col-md-4 feature">
+        <button type="button" class="btn btn-job-open btn-outline-light text-white rounded-pill border-2">Create an
+            Account</button>
+        <button type="button" class="btn btn-job-open text-white">Post a Job</button>
+    </div>
+</div>
+<!-- ====================Footer==================== -->
+<div class="row mx-5 my-5 justify-content-center gap-2 footer">
+    <div class="col-sm-5 col-lg-2">
+        <h6 class="fw-bolder text-dark"><a class="navbar-brand" href="#"><img src="./img/logo.png" alt="logo" width="30px"><span id="logo">UltraJob</span></a></h6>
+        <p class="my-1"><i class="bi bi-globe"></i> www.Ultrajob.com</p>
+        <p class="my-1"><i class="bi bi-telephone"></i> 999-999-9999</p>
+        <p class="my-1"><i class="bi bi-envelope"></i> Ultrajob@gmail.com</p>
+        <p class="social-icons my-1">
+            <a href="#" class="text-decoration-none"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-youtube"></i></a>
+        </p>
+    </div>
+    <div class="col-sm-5 col-lg-2">
+        <h6 class="fw-bolder text-dark">Company</h6>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">About</a></p>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">Blogs</a></p>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">Jobs</a></p>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">Contact</a></p>
+    </div>
+    <div class="col-sm-5 col-lg-2">
+        <h6>Resources</h6>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">Guide</a></p>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">How it works</a></p>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">Salary Tool</a></p>
+    </div>
+    <div class="col-sm-5 col-lg-3 col-12 notified">
+        <h6 class="fw-bolder text-dark">Newsletter</h6>
+        <div id="send">
+            <h5 class="fw-bolder text-dark">Get notified job News</h5>
+            <input type="text" class="form-control rounded-pill send-inp" id="floatingInput"
+                placeholder="yourname@gamail.com">
+                 <span class="btn rounded-circle send-btn"><i
+                    class="bi bi-send"></i></span> <span id="bi-person"><i class="bi bi-person"></i></span>
+        </div>
+    </div>
+</div>
+
+<div class="container-fuild">
+    <div class="row d-flex footer-main p-2">
+        <div class="col-md-3 text-center">Copyright &#169; Ultrajob 2023-30</div>
+        <div class="col-md-3  col-6 justify-content-center">
+            <a href="" class="text-decoration-none text-white">Policy</a>
+            <a href="" class="text-decoration-none text-white">Privacy</a>
+            <a href="" class="text-decoration-none text-white">Terms</a>
+        </div>
+        <div class="col-md-3 col-6 justify-content-center">
+        <p class="social-icons my-1">
+            <a href="#" class="text-decoration-none"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-youtube"></i></a>
+        </p>
+    </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+    <!-- ====================bootstrap js===================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+        <!-- ==========custom js================ -->
+        <script src="./script.js"></script>
+</body>
+
+</html>

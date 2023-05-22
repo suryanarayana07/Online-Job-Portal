@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UltraJob</title>
+    <!-- ===================bootstrap css=============== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- ===================bootstrap Icon=============== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- ===================Costume css=============== -->
+    <link rel="stylesheet" href="./Css/about.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <!-- ================Navbar============= -->
+                <nav class="navbar navbar-expand-lg fixed-top">
+                    <div class="container">
+                        <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="logo" width="30px"><span
+                                id="logo">UltraJob</span></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-item" aria-current="page" href="./index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-link-item" aria-current="page" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Pages
+                                    </a>
+                                    <ul class="dropdown-menu justify-content-center">
+                                        <li><a class="dropdown-item nav-link-item text-center nav-link" href="./joblisting.html">Job Listings</a></li>
+                                        <li><a class="dropdown-item nav-link-item text-center nav-link" href="./jobDetails.html">Job Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item nav-link-item">
+                                    <a class="nav-link" aria-current="page" href="./contact.html">Contact</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <button type="button" class="btn nav-btn rounded-pill py-1 Register-btn"
+                                    data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
+                                <button type="button" class="btn nav-btn btn-danger rounded-pill login-btn"
+                                    data-bs-toggle="modal" data-bs-target="#login">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+                <!-- =====================scrollUp button=================== -->
+                <div class="container justify-content-center align-items-center">
+                    <button><i class="bi bi-chevron-up scrollUp"></i></button>
+                </div>
+                <!-- ================register-modal=============== -->
+                <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="container">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    <h4 class="logo text-center my-4 fs-2">UltraJob</h4>
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="Name">
+                                        <label for="floatingInput">Name</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput"
+                                            placeholder="name@example.com">
+                                        <label for="floatingInput">Email address</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="floatingPassword"
+                                            placeholder="Password">
+                                        <label for="floatingPassword">Password</label>
+                                    </div>
+                                    <div class="form-check mt-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I read and agree With all the <a href="#" class="text-decoration-none">Term
+                                                &
+                                                Condition</a>
+                                        </label>
+                                    </div>
+                                    <p class="mt-1 ">Already have a Account? <a data-bs-toggle="modal"
+                                            data-bs-target="#login" class="login-link">LogIn</a></p>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-primary py-1 px-5"
+                                    data-bs-dismiss="modal">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ======================Login-modal========================= -->
+                <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="loginLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="container">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    <h4 class="logo text-center my-4 fs-2">UltraJob</h4>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput"
+                                            placeholder="name@example.com">
+                                        <label for="floatingInput">Email address</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="floatingPassword"
+                                            placeholder="Password">
+                                        <label for="floatingPassword">Password</label>
+                                    </div>
+                                    <a href="#" class="text-decoration-none">Forgotton Password</a><br>
+                                    <p class="mt-2">Don't have account? &nbsp;<a data-bs-toggle="modal"
+                                            data-bs-target="#registerModal" class="login-link">Register</a></p>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-primary py-1 px-4"
+                                    data-bs-dismiss="modal">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===========================About Ultrajob===================== -->
+                <div class="row mt-4">
+                    <div class="col about-ultrajob">
+                        <h3 class="fw-bolder text-white">About UltraJob</h3>
+                        <p class="rounded-pill text-dark bg-light p-1 about-header-text">Home / About</p>
+                    </div>
+                </div>
+                <!-- ====================introduction================= -->
+            </div>
+        </div>
+        <div class="row justify-content-center gap-3 my-5 mx-4">
+            <div class="col-10 col-md-4 col-lg-3 " style="height:280px;">
+                <h4 class="fw-bold">Intraoducing UltraJob</h4>
+                            <h6 class="fw-bold">Get Hired, Get Your New Job</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mollitia odit voluptatum
+                                sapiente ullam rerum vel magni animi, libero exercitationem.</p>
+                            <a href="#" class=" btn text-decoration-none border-black rounded-pill py-1 px-2 text-danger">Explore
+                                Services</a>
+                            <a href="#" class="text-decoration-none text-black px-1"> Contact</a>
+            </div>
+            <div class="col-10 col-lg-3 col-md-4 intro-right" style="height:250px;">
+                <div class="col-auto exp text-white">
+                    <p class="px-1"><span class="fs-5">20</span> years of Experience</p>
+                    <div class="top-sky">
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ===========================Services======================== -->
+        <div class="row d-flex justify-content-center gap-3 my-4 align-items-center">
+            <h4 class="fw-bold text-center">We Deliver Best Services</h4>
+            <div class="col-8 col-md-3 col-lg-2 d-flex align-items-center justify-content-center flex-column service-card">
+                <p class="service-card-icon m-0"><i class="bi bi-calendar3-event"></i></p>
+                <p class="service-card-heading fw-bold my-1">Website design</p>
+                <p class="service-card-text text-center m-0">Lorem ipsum dolor sit amet ectetur, icing elit. oribus nam quo accusamus ipsum cumque optio!</p>
+            </div>
+            <div class="col-8 col-md-3 col-lg-2 d-flex align-items-center justify-content-center flex-column service-card service-card active">
+                <p class="service-card-icon m-0"><i class="bi bi-twitch"></i></p>
+                <p class="service-card-heading fw-bold my-1">Marketing</p>
+                <p class="service-card-text text-center m-0">Lorem ipsum dolor sit amet tetur, sicing elit. oribus nam quo accusamus ipsum cumque optio!</p>
+            </div>
+            <div class="col-8 col-md-3 col-lg-2 d-flex align-items-center justify-content-center flex-column service-card">
+                <p class="service-card-icon m-0"><i class="bi bi-play-circle-fill"></i></p>
+                <p class="service-card-heading fw-bold my-1">Video</p>
+                <p class="service-card-text text-center m-0">Lorem ipsum dolor sit amet tetur, pisicing elit. oribus nam quo usamus ipsum cumque optio!</p>
+            </div>
+        </div>
+<!-- ====================Testimonial================== -->
+<div class="row my-4">
+    <div class="col Testimonial">
+        <h5 class="fw-bold text-center my-4">Happy Costumers</h5>
+    </div>
+</div>
+<!-- ================job openings================= -->
+<div class="row d-flex align-items-center justify-content-evenly Jobs my-4">
+    <div class="col-md-4 text-white">
+        <h2 class="fw-bold">Over 10k Opening jobs</h2>
+        <p class="fs-6 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugiat culpa, quaerat ipsa quae
+            harum quos veritatis voluptatibus asper</p>
+    </div>
+    <div class="col-md-4 feature">
+        <button type="button" class="btn btn-job-open btn-outline-light text-white rounded-pill border-2">Create an
+            Account</button>
+        <button type="button" class="btn btn-job-open text-white">Post a Job</button>
+    </div>
+</div>
+<!-- ===============Footer=============== -->
+<!-- ====================Footer==================== -->
+<div class="row mx-5 my-5 justify-content-center gap-2 footer">
+    <div class="col-sm-5 col-lg-2">
+        <h6 class="fw-bolder text-dark"><a class="navbar-brand" href="#"><img src="./img/logo.png" alt="logo" width="30px"><span id="logo">UltraJob</span></a></h6>
+        <p class="my-1"><i class="bi bi-globe"></i> www.Ultrajob.com</p>
+        <p class="my-1"><i class="bi bi-telephone"></i> 999-999-9999</p>
+        <p class="my-1"><i class="bi bi-envelope"></i> Ultrajob@gmail.com</p>
+        <p class="social-icons my-1">
+            <a href="#" class="text-decoration-none"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-youtube"></i></a>
+        </p>
+    </div>
+    <div class="col-sm-5 col-lg-2">
+        <h6 class="fw-bolder text-dark">Company</h6>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">About</a></p>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">Blogs</a></p>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">Jobs</a></p>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">Contact</a></p>
+    </div>
+    <div class="col-sm-5 col-lg-2">
+        <h6>Resources</h6>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">Guide</a></p>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">How it works</a></p>
+        <p class="my-1"><a href="#" class="text-decoration-none text-dark">Salary Tool</a></p>
+    </div>
+    <div class="col-sm-5 col-lg-3 col-12 notified">
+        <h6 class="fw-bolder text-dark">Newsletter</h6>
+        <div id="send">
+            <h5 class="fw-bolder text-dark">Get notified job News</h5>
+            <input type="text" class="form-control rounded-pill send-inp" id="floatingInput"
+                placeholder="yourname@gamail.com">
+                 <span class="btn rounded-circle send-btn"><i
+                    class="bi bi-send"></i></span> <span><i class="bi bi-person"></i></span>
+        </div>
+    </div>
+</div>
+
+<div class="container-fuild">
+    <div class="row d-flex footer-main p-2">
+        <div class="col-md-3 justify-content-center">Copyright &#169; Ultrajob 2023-30</div>
+        <div class="col-md-3  col-6 justify-content-center">
+            <a href="" class="text-decoration-none text-white">Policy</a>
+            <a href="" class="text-decoration-none text-white">Privacy</a>
+            <a href="" class="text-decoration-none text-white">Terms</a>
+        </div>
+        <div class="col-md-3 col-6 justify-content-center">
+        <p class="social-icons my-1">
+            <a href="#" class="text-decoration-none"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-decoration-none"><i class="bi bi-youtube"></i></a>
+        </p>
+    </div>
+    </div>
+</div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+</body>
+
+</html>
